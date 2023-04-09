@@ -9,3 +9,13 @@
 #
 # 385916 -> yes
 # 123456 -> no
+
+number_ticket = int(input('Enter number of ticket: '))
+
+first_half_number_ticket = number_ticket//1000 % 10 + number_ticket // 10000 % 10 + number_ticket // 100000
+second_half_number_ticket = number_ticket % 10 + number_ticket // 10 % 10 + number_ticket // 100 % 10
+if(first_half_number_ticket == second_half_number_ticket):
+    print('Congratulation. This is a lucky ticket')
+else:
+    print('This ticket is not happy')
+
