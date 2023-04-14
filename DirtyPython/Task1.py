@@ -1,18 +1,21 @@
-# 1. На вход поступает число: найти сумму цифр числа,
-# в том числе если оно отрицательное или вещественное. (float)
-#
-m = input('Enter number: ')
-n = int(float(m) * 10 ** len(m))
-print(n)
-a = 0
-if (n >= 0):
-    for i in range(len(m) * 2):
-        a += n % 10
-        n = n // 10
-    print(a)
+# а) на вход подается слово - проверить, является ли оно палиндромом
+# Например на слово  ‘довод’ выводит  ‘да’, а на слово  ‘повод’ - нет.
+# Больше примеров слов-палиндромов
+# довод, доход, заказ, кабак, комок, мадам, олололо, потоп, радар
+
+text = input(' Enter string to check: ')
+if (text == text[::-1]):
+    print('Yes. This text is a polindrom')
 else:
-    n = n * -1
-    for i in range(len(m) * 2):
-        a += n % 10
-        n = n // 10
-    print(a)
+    print('No. This text is not a polindrom')
+
+# на вход подается фраза - проверить, является ли она палиндромом
+# Не учитывается регистр, знаки препинания и пробелы.
+# Примеры фраз-палиндромов
+# А роза упала на лапу Азора
+
+text = input(' Enter string to check: ')
+if (text.lower().replace(' ', '') == text.lower().replace(' ', '')[::-1]):
+    print('Yes. This text is a polindrom')
+else:
+    print('No. This text is not a polindrom')
