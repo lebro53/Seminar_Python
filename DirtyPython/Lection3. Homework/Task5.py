@@ -11,12 +11,12 @@ day_dict = {1: 'Четверг', 2: 'Пятница', 3: 'Суббота',
 start_day = 1
 start_month = 1
 start_years = 1970
-finish_day = 28
-finish_month = 4
-finish_years = 2023
+finish_day = int(input('Введите день: '))
+finish_month = int(input('Введите месяц: '))
+finish_years = int(input('Введите год: '))
 
 leap_years = 0
-leap_month = 29
+# leap_month = 29
 day_of_month = 0
 quantity_start_day = 0
 quantity_finish_day = 0
@@ -26,7 +26,6 @@ for i in range(start_years, finish_years+1):
         leap_years += 1
 
 # В идеале нижний цикл надо засунуть в функцию и будет красиво.
-#
 while start_month > 0:
     if start_month == 1 or start_month == 3 or start_month == 5 or start_month == 7 or start_month == 8 or start_month == 10 or start_month == 12:
         day_of_month = 31
@@ -53,8 +52,6 @@ while finish_month > 0:
 
 
 quantity_day = (finish_years - start_years) * 365 + leap_years + quantity_finish_day - (day_of_month - finish_day)
-
-
 
 test_key = quantity_day % 7
 for key, value in day_dict.items():
