@@ -41,7 +41,7 @@ def search_is_prime(num: int) -> list[int]:
     return new_list
 
 
-print(search_is_prime(3859152))
+print(search_is_prime(38))
 
 # divider(23)
 #
