@@ -61,7 +61,7 @@ class PhoneBook:
         del copy_file[delete_name - 1]
         return copy_file
 
-    def save_file(self, copy_file) -> None:
+    def save(self, copy_file) -> None:
         with open(self.path, 'w', encoding='UTF-8') as file:
             new_text = (''.join(copy_file))
             file.write(new_text)

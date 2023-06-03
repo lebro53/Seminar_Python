@@ -30,6 +30,6 @@ def start(copy_open_PB: list):
                 view.text_print(text.successful)
                 link_new_PB_copy(copy_open_PB)
             case 6:
-                view.save_file_func(my_PB.save_file, copy_open_PB)
+                view.save_file_func(my_PB.save, copy_open_PB)
             case 7:
                 break
